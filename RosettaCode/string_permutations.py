@@ -1,4 +1,7 @@
 from itertools import permutations
+# this does not solve the problem as written... I need to create the permutations
+# and use a regular expression to look for repeating characters. Have been unsuccesful
+# writing the regular expression
 
 
 def permAlone(string):
@@ -6,10 +9,7 @@ def permAlone(string):
     perms = permutations(string)
     for permutation in list(perms):
         no_repeats = True
-        # print(permutation)
         for i in range(len(permutation)-1):
-            # print('in loop')
-            # print('i=', i)
             if permutation[i]== permutation[i+1]:
                 no_repeats = False
             
